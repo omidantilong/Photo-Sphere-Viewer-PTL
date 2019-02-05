@@ -531,7 +531,7 @@ PhotoSphereViewer.prototype._createSphere = function(scale) {
 
   var material = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide, // needs to be DoubleSide for CanvasRenderer
-    overdraw: PhotoSphereViewer.SYSTEM.isWebGLSupported && this.config.webgl ? 0 : 1
+//    overdraw: PhotoSphereViewer.SYSTEM.isWebGLSupported && this.config.webgl ? 0 : 1
   });
 
   var mesh = new THREE.Mesh(geometry, material);
@@ -573,7 +573,7 @@ PhotoSphereViewer.prototype._createCubemap = function(scale) {
   for (var i = 0; i < 6; i++) {
     materials.push(new THREE.MeshBasicMaterial({
       side: THREE.BackSide,
-      overdraw: PhotoSphereViewer.SYSTEM.isWebGLSupported && this.config.webgl ? 0 : 1
+      //overdraw: PhotoSphereViewer.SYSTEM.isWebGLSupported && this.config.webgl ? 0 : 1
     }));
   }
 
