@@ -18,11 +18,11 @@ PhotoSphereViewer.prototype._bindEvents = function() {
       window.addEventListener('mouseup', this);
     }
 
-    this.hud.container.addEventListener('touchstart', this);
+    this.hud.container.addEventListener('touchstart', this, {passive:true});
     window.addEventListener('touchend', this);
 
     this.hud.container.addEventListener('mousemove', this);
-    this.hud.container.addEventListener('touchmove', this);
+    this.hud.container.addEventListener('touchmove', this, {passive:true});
   }
 
   if (PhotoSphereViewer.SYSTEM.fullscreenEvent) {
@@ -30,7 +30,7 @@ PhotoSphereViewer.prototype._bindEvents = function() {
   }
 
   if (this.config.mousewheel) {
-    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this);
+    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this, {passive:true});
   }
 
   this.on('_side-reached', function(side) {

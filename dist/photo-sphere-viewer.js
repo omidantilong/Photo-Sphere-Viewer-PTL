@@ -1619,11 +1619,11 @@ PhotoSphereViewer.prototype._bindEvents = function() {
       window.addEventListener('mouseup', this);
     }
 
-    this.hud.container.addEventListener('touchstart', this);
+    this.hud.container.addEventListener('touchstart', this, {passive:true});
     window.addEventListener('touchend', this);
 
     this.hud.container.addEventListener('mousemove', this);
-    this.hud.container.addEventListener('touchmove', this);
+    this.hud.container.addEventListener('touchmove', this, {passive:true});
   }
 
   if (PhotoSphereViewer.SYSTEM.fullscreenEvent) {
@@ -1631,7 +1631,7 @@ PhotoSphereViewer.prototype._bindEvents = function() {
   }
 
   if (this.config.mousewheel) {
-    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this);
+    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this, {passive:true});
   }
 
   this.on('_side-reached', function(side) {
@@ -4797,11 +4797,11 @@ PSVPanel.prototype.create = function() {
   // Event for panel resizing + stop bubling
   var resizer = this.container.querySelector('.psv-panel-resizer');
   resizer.addEventListener('mousedown', this);
-  resizer.addEventListener('touchstart', this);
+  resizer.addEventListener('touchstart', this, {passive:true});
   this.psv.container.addEventListener('mouseup', this);
   this.psv.container.addEventListener('touchend', this);
   this.psv.container.addEventListener('mousemove', this);
-  this.psv.container.addEventListener('touchmove', this);
+  this.psv.container.addEventListener('touchmove', this, {passive:true});
 };
 
 /**
