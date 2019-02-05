@@ -1631,7 +1631,7 @@ PhotoSphereViewer.prototype._bindEvents = function() {
   }
 
   if (this.config.mousewheel) {
-    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this, {passive:true});
+    this.hud.container.addEventListener(PhotoSphereViewer.SYSTEM.mouseWheelEvent, this);
   }
 
   this.on('_side-reached', function(side) {
