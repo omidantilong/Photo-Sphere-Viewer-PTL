@@ -1,3 +1,5 @@
+**Peterloo Photo Sphere Fork**
+
 # Photo Sphere Viewer
 
 [![NPM version](https://img.shields.io/npm/v/photo-sphere-viewer.svg?style=flat-square)](https://www.npmjs.com/package/photo-sphere-viewer)
