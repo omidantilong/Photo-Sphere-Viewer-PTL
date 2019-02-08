@@ -1,4 +1,5 @@
 **Peterloo Photo Sphere Fork**
+Forked from https://github.com/mistic100/Photo-Sphere-Viewer @ 3.5.1 
 
 # Photo Sphere Viewer
 
