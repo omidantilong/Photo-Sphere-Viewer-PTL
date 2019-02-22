@@ -2823,12 +2823,18 @@ PhotoSphereViewer.prototype.animate = function(options, speed) {
   if (!duration) {
     if (positionProvided) {
       this.rotate(options);
+      return 
     }
     if (zoomProvided) {
       this.zoom(options.zoom);
+      return
     }
 
-    return PSVAnimation.resolve();
+    if(typeof PSVAnimation.resolve === 'function') {
+      return PSVAnimation.resolve();
+    } else {
+      return
+    }
   }
 
   this.prop.animation_promise = new PSVAnimation({
