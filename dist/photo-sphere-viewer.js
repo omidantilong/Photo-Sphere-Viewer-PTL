@@ -4803,11 +4803,11 @@ PSVPanel.prototype.create = function() {
   // Event for panel resizing + stop bubling
   var resizer = this.container.querySelector('.psv-panel-resizer');
   resizer.addEventListener('mousedown', this);
-  resizer.addEventListener('touchstart', this, {passive:true);
+  resizer.addEventListener('touchstart', this, {passive:true});
   this.psv.container.addEventListener('mouseup', this);
   this.psv.container.addEventListener('touchend', this);
   this.psv.container.addEventListener('mousemove', this);
-  this.psv.container.addEventListener('touchmove', this, {passive:true);
+  this.psv.container.addEventListener('touchmove', this, {passive:true});
 };
 
 /**
